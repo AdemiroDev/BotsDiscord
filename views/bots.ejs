@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bot.css">
+    <link rel="stylesheet" href="/css/now-ui-kit.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Discord Bot List - Bots</title>
+    <link rel="icon" href="https://cdn.glitch.com/5cda4504-f2ca-4f19-b8de-55d3af5e4140%2Fdownload.png?v=1605826331031" type="image/gif" sizes="16x16">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-transparent">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="https://cdn.discordapp.com/icons/720775970080030781/a_bb121dc6a299988ff95416db8bf298ab.png" width="20px" height="20px" style="max-width: none !important; border-radius: 50%;">
+    </button>
+    <img src="https://cdn.discordapp.com/icons/720775970080030781/a_bb121dc6a299988ff95416db8bf298ab.gif" width="50" height="50" style="border-radius: 50%;">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 20px !important">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/"><i class="fas fa-home" style="margin-right: 7px;"></i>Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/bots"><i class="fas fa-search" style="margin-right: 7px;"></i>Bots</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/addbot"><i class="fas fa-plus" style="margin-right: 7px;"></i>Adicionar Bot</a>
+            </li>
+            <li class="nav-item">
+                  
+                <a class="nav-link" href="/features"></a>
+
+            </li>
+        </ul>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%- user.tag %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/perfil">Perfil</a>
+                <a class="dropdown-item" href="/mybots">Meus Bots</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" href="/api"><i class="fas fa-wrench" style="margin-right: 7px;"></i>Api</a>
+        </div>
+    </div>
+</nav>
+<div class="heading">
+<div id="search" class="search"> 
+  <input id="input" type="text" placeholder="Procure por um bot" />
+</div>
+<div id="overlay" class="overlay" style="display: none"></div>
+  </div> 
+
+    <div class="container">
+        <div class="mbr-row mbr-justify-content-center">
+            
+  <% Bots.forEach(function(bot) { %>
+  <div class="card">
+    <!--<div class="card-content">-->
+    <div class="profile-img">
+      <img src="<%- bot.avatar %>" alt="Avatar">
+      </div>
+    <h4 class="name"><%- bot.name %></h4>
+    <p class="detail"><%- bot.shortdescription %></p>
+    <a href="/bots/<%- bot._id %>" class="btn btn-sm btn-secondary display-4">Pagina</a>
+      <!--</div>    -->
+      </div>
+  <% }) %>
+</div>
+
+    <div class="footer">
+        <div class="bot-footer">
+            <img src="https://cdn.discordapp.com/icons/720775970080030781/a_bb121dc6a299988ff95416db8bf298ab.png" style="border-radius: 50%;" width="50"><br />
+            Copyright Rocket List - 2020
+        </div><br/>
+        <div class="nouridio">Design by <%- client.users.cache.get("485088800540983299").tag %></div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="/js/now-ui-kit.min.js"></script>
+</body>
+</html>
