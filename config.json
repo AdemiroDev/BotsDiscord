@@ -1,0 +1,9 @@
+{
+  "token": "NzY0OTIyNjgzMzU1MTY4ODI4.X4NTww.jisp7DXItxEJLx9H6eMBkEsXbn4",
+  "prefix": "rl.",
+  "scopes": ["identify", "guilds"],
+  "prompt": "consent",
+  "clientID": "764922683355168828",
+  "clientSecret": "DxJXhmXlR_BthQKU0z5kONTGRQpUoSgZ",
+  "redirectURL": "https://botlistrocket.glitch.me/callback"
+}
